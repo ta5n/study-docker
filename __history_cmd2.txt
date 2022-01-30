@@ -1,0 +1,47 @@
+ 1399  docker network ls
+ 1400  docker network prune
+ 1401  docker network ls
+ 1402  grcat docker network ls
+ 1403  grc docker network ls
+ 1404  grc docker container ls
+ 1405  grc docker container ls -a
+ 1406  grc docker ps -a
+ 1407  docker container prune
+ 1408  grc docker ps -a
+ 1409  grc docker container ls -a
+ 1410  grc docker image ls
+ 1411  grc docker images
+ 1412  docker image prune
+ 1413  grc docker images
+ 1414  docker network create --driver=bridge --subnet=10.10.0.0/16 --ip-range=10.10.10.0/24 --gateway=10.10.10.10 alistirma-agi
+ 1415  docker network inspect alistirma-agi | jq -C | less -r
+ 1416  docker container run --detach --publish 8080:80 --network alistirma-agi nginx:1.16
+ 1417  docker ps
+ 1418  docker logs -f 438
+ 1419  docker ps
+ 1420  docker logs -f 438
+ 1421  docker container run -dit --name test1 ozgurozturknet/adanzyedocker sh
+ 1422  docker ps
+ 1423  docker network connect alistirma-agi test1
+ 1424  docker attach test1
+ 1425  docker ps
+ 1426  docker attach test1
+ 1427  docker stop 4380
+ 1428  docker container run --detach --publish 8080:80 --network alistirma-agi --name web1 nginx:1.16
+ 1429  docker attach test1
+ 1430  docker ps
+ 1431  docker container rm -f web1 test1
+ 1432  docker ps
+ 1434  docker container rm 438
+ 1439  docker container run --detach --publish 80:80 --network alistirma-agi --name websrv --cpus 2 --env-file env.list ozgurozturknet/webkayit
+ 1440  docker ps
+ 1441  docker container run -detach --network alistirma-agi --memory 1GB --env-file envmysql.list --name mysqldb ozgurozturknet/webdb
+ 1442  docker ps
+ 1443  docker logs mysqldb
+ 1447  docker container ls
+ 1448  docker container rm -f mysqldb websrv
+ 1449  docker ps -a
+ 1451  docker container ls -a
+ 1452  docker image ls
+ 1453  docker network rm alistirma-agi
+

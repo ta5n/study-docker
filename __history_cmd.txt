@@ -1,0 +1,191 @@
+: 1641062484:0;docker version
+: 1641062494:0;docker info
+: 1641062679:0;docker
+: 1641062762:0;docker run hello-world
+: 1641062933:0;docker container run hello-world
+: 1641063007:0;docker
+: 1641063109:0;docker image --help
+: 1641063121:0;docker image ls
+: 1641063218:0;docker image rm --help
+: 1641063362:0;docker container --
+: 1641063513:0;docker container ls
+: 1641063611:0;docker container run --help
+: 1641063743:0;docker container run --name ilkcontainer ozgurozturknet/app1
+: 1641064255:0;docker container ls -a
+: 1641064645:0;docker container run -p 80:80 ozgurozturknet/adanzyedocker
+: 1641124289:0;docker container run --name ilkcontainer ozgurozturknet/app1
+: 1641124335:0;docker container run --name ilkcontainer
+: 1641124340:0;docker container run --name ilkcontainer ozgurozturknet/app1
+: 1641124358:0;docker run --help
+: 1641124412:0;docker container rm ilkcontainer 
+: 1641124415:0;docker container run --name ilkcontainer ozgurozturknet/app1
+: 1641124988:0;docker container ls -a
+: 1641125690:0;docker container run -p 80:80 ozgurozturknet/adanzyedocker
+: 1641125891:0;docker container ls
+: 1641125895:0;docker container run -p 80:80 ozgurozturknet/adanzyedocker
+: 1641125979:0;docker container ls
+: 1641125986:0;docker container run -p 80:80 ozgurozturknet/adanzyedocker
+: 1641125991:0;docker container ls
+: 1641126068:0;docker container logs 62463720fe50
+: 1641126106:0;docker container logs 624
+: 1641126907:0;docker container ls
+: 1641126909:0;docker container ls -a
+: 1641127034:0;docker container run --name denemecon ozgurozturknet/adanzyedocker java app1
+: 1641127113:0;docker container ls -a
+: 1641127211:0;docker container run -p 80:80 ozgurozturknet/adanzyedocker
+: 1641134608:0;docker container run -d -p 80:80  --websunucu ozgurozturknet/adanzyedocker
+: 1641134628:0;docker container run -d -p 80:80  --name websunucu ozgurozturknet/adanzyedocker
+: 1641134639:0;docker ls
+: 1641134645:0;docker container ls
+: 1641141186:0;docker start websunucu
+: 1641141188:0;docker ps
+: 1641141197:0;docker stop websunucu
+: 1641141201:0;docker ps
+: 1641141295:0;docker container run -d -p 80:80 --name websunucu2 ozgurozturknet/adanzyedocker
+: 1641141317:0;docker stop websunucu2
+: 1641141334:0;docker start websunucu
+: 1641141345:0;docker stop websunucu
+: 1641141610:0;docker container exec -it hello-world sh
+: 1641141619:0;docker container ls
+: 1641141622:0;docker container ls -a
+: 1641141631:0;docker run hello-world
+: 1641141638:0;docker container ls -a
+: 1641141649:0;docker container exec -it hello-world sh
+: 1641141666:0;docker container exec -it musing_kepler sh
+: 1641141682:0;docker container run -it musing_kepler sh
+: 1641141692:0;docker container start -it musing_kepler sh
+: 1641141705:0;docker container start musing_kepler sh
+: 1641141713:0;docker container start musing_kepler
+: 1641141722:0;docker container ls -a
+: 1641141742:0;docker container exec musing_kepler sh
+: 1641141777:0;docker container run -d --name hello-world hello-world sh
+: 1641141793:0;docker container run -d --name hello-world hello-world bash
+: 1641141802:0;docker container run -d --name hello-world2 hello-world bash
+: 1641141818:0;docker container ls -a
+: 1641141858:0;docker container rm 902 4ee 7b4
+: 1641141861:0;docker container ls -a
+: 1641143022:0;docker container ls -a
+: 1641143035:0;docker image ls
+: 1641143065:0;docker search alpine
+: 1641143078:0;docker info alpine
+: 1641143089:0;docker image info alpine
+: 1641143113:0;docker image history alpine
+: 1641190711:0;docker volume create ilkvolume
+: 1641190745:0;docker volume inspect ilkvolume
+: 1641190764:0;docker volume inspect ilkvolume | jq
+: 1641190966:0;docker container run -it --name volumeBaglama -v ilkvolume:/uygulama alpine sh
+: 1641191005:0;cd /var/lib/docker
+: 1641191024:0;sudo cd /var/lib/docker/
+: 1641191045:0;sudo ls /var/lib/docker
+: 1641191054:0;sudo ls /var/lib/docker/volumes/
+: 1641191066:0;sudo ll /var/lib/docker/volumes/
+: 1641191072:0;sudo lsd -l /var/lib/docker/volumes/
+: 1641213682:0;docker pull centos alpine nginx httpd:alpine ozgurozturknet/adanzyedocker ozgurozturknet/hello-app ozgurozturknet/app1
+: 1641213749:0;docker pull centos;docker pull alpine; docker pull nginx; docker pull httpd:alpine; docker pull ozgurozturknet/adanzyedocker; docker pull ozgurozturknet/hello-app; docker pull ozgurozturknet/app1
+: 1641213903:0;docker container create ozgurozturknet/app1
+: 1641213940:0;docker container create -d httpd:alpine
+: 1641213967:0;docker container run -d httpd:alpine
+: 1641213975:0;docker container ls
+: 1641214007:0;docker container logs 521084
+: 1641214023:0;docker container logs agitated_germain
+: 1641214040:0;docker container stop agitated_germain
+: 1641214057:0;docker container start agitated_germain
+: 1641214064:0;docker container ls
+: 1641214086:0;docker container ls -a
+: 1641214138:0;docker container run -d -p 80:80 --name websunucu ozgurozturknet/adanzyedocker
+: 1641214177:0;docker exec -it websunucu sh
+: 1641214253:0;docker container rm -f 4eb7
+: 1641214288:0;docker container run alpine ls
+: 1641214302:0;docker volume create alistirma1
+: 1641214370:0;docker container run -it --name birinci -v alistirma1:/test sh
+: 1641214383:0;docker container run -it --name birinci -v alistirma1:/test alpine sh
+: 1641214465:0;docker container run -it --name ikinci -v alistirma1:/test alpine sh
+: 1641214550:0;docker container run -it  --name ucuncu -v alistirma1:/test:ro alpine sh
+: 1641214591:0;ls
+: 1641214631:0;echo "<h1>AlıŃ�tırma 1</h1>" >> index.html
+: 1641214760:0;docker container run --name websunucu1 -p 80:80 -v $(pwd):/usr/local/apache2/htdocs ozgurozturknet/adanzyedocker
+: 1641214939:0;docker container ls -al
+: 1641214941:0;docker container ls -a
+: 1641214989:0;docker container rm 47f b5a beb a05 c6a 521 3d2
+: 1641215021:0;docker container ls -a
+: 1641215032:0;docker container rm -f 5210
+: 1641231426:0;docker info
+: 1641231456:0;docker info | jq
+: 1641231470:0;docker info | grep plugins
+: 1641231482:0;docker info | grep Plugins
+: 1641231494:0;docker info
+: 1641231959:0;docker network ls
+: 1641231983:0;history
+: 1641232015:0;docker network ls
+: 1641232030:0;ls
+: 1641232047:0;docker network ls
+: 1641232635:0;docker network inspect bridge | jq
+: 1641232714:0;jq --help
+: 1641232774:0;docker info | jq -R
+: 1641232797:0;docker network inspect bridge | jq -r
+: 1641232828:0;docker network inspect bridge | jq --tab
+: 1641232858:0;docker network inspect bridge | jq --tab -c
+: 1641232868:0;docker network inspect bridge | jq -c
+: 1641232875:0;docker network inspect bridge | jq --tab
+: 1641232910:0;docker network ls | jq --tab -R
+: 1641232913:0;docker network ls | jq --tab
+: 1641232921:0;docker network ls
+: 1641232937:0;exit
+: 1641368944:0;docker container run -it alpine
+: 1641369010:0;docker container run --name websunucu1 -p 80:80 nginx
+: 1641369039:0;docker container ls
+: 1641369055:0;docker container exec websunucu1 sh
+: 1641369062:0;docker container exec -it websunucu1 sh
+: 1641369140:0;docker container run --name websunucu1 nginx
+: 1641369150:0;docker container ls -a
+: 1641369162:0;docker container rm websunucu1
+: 1641369168:0;docker container run --name websunucu1 nginx
+: 1641369178:0;docker container exec -it websunucu1 sh
+: 1641369237:0;docker network ls
+: 1641369244:0;docker network --help
+: 1641369268:0;docker network inspect bridge | jq --tab
+: 1641369307:0;docker network inspect bridge | jq --tab | grep IPv4Address
+: 1641369314:0;docker network inspect bridge | jq | grep IPv4Address
+: 1641369542:0;docker image ls
+: 1641369592:0;docker image inspect ozgurozturknet/adanzyedocker | jq
+: 1641554746:0;docker network ls
+: 1641892188:0;docker network create bridge1
+: 1641892196:0;docker network ls
+: 1641892346:0;docker network inspect bridge1 | jq | less -c
+: 1641900207:0;docker container run -dit --name websunucu --net bridge1 ozgurozturknet/adanzyedocker sh
+: 1641900219:0;docker container run -dit --name database --net bridge1 ozgurozturknet/adanzyedocker sh
+: 1641900321:0;docker attach websunucu
+: 1641900363:0;docker attach database
+: 1641901074:0;docker network create --driver=bridge --subnet=10.10.0.0/16 --ip-range=10.10.10.0/24 --gateway=10.10.10.10 bridge2
+: 1641901118:0;docker network inspect bridge2 | jq -C | less -r
+: 1641901320:0;docker network connect bridge2 database
+: 1641901326:0;docker attach database
+: 1641988817:0;docker container ls -a
+: 1641988932:0;docker container rm 6b3 154 a62 c38 706 websunucu database db websunucu1
+: 1641988935:0;docker container ls -a
+: 1641988996:0;docker container run --detach -it --name app1 ozgurozturknet/adanzyedocker
+: 1641989019:0;docker logs app1
+: 1641989047:0;docker container run --detach -it --name appbir ozgurozturknet/app1
+: 1641989053:0;docker logs appbir
+: 1642013069:0;docker container run --detach --publish 80:80 --name con1 nginx
+: 1642013124:0;docker logs con1
+: 1642013944:0;docker exec -it con1 sh
+: 1642014355:0;docker logs --details con1
+: 1642014372:0;docker logs -t con1
+: 1642014588:0;docker logs con1
+: 1642014766:0;docker logs --tail 2 con1
+: 1642014792:0;docker logs --tail 1 con1
+: 1642015614:0;docker stats
+: 1642015641:0;docker top con1
+: 1642058974:0;docker stats con1
+: 1642059013:0;docker container start con1 --memory=100m
+: 1642059036:0;docker container start --memory=100m con1
+: 1642059085:0;docker container run --detach --publish 8081:80 --memory=100m --name=con2 nginx
+: 1642059108:0;docker stats
+: 1642059152:0;docker container run --detach --publish 8081:80 --memory=50m --cpu="1,5" --name=con3 nginx
+: 1642059158:0;docker container run --detach --publish 8081:80 --memory=50m --cpus="1,5" --name=con3 nginx
+: 1642059168:0;docker container run --detach --publish 8081:80 --memory=50m --cpus="1" --name=con3 nginx
+: 1642059178:0;docker container run --detach --publish 8082:80 --memory=50m --cpus="1" --name=con3 nginx
+: 1642059190:0;docker container rm con3
+: 1642059195:0;docker container run --detach --publish 8082:80 --memory=50m --cpus="1" --name=con3 nginx
+: 1642059206:0;docker stats
