@@ -1,0 +1,59 @@
+version: "3.9"
+
+services:
+    mysql:
+        image: mysql:5.7
+        environment:
+            MYSQL_RANDOM_ROOT_PASSWORD: 1
+            MYSQL_DATABASE: wordpress
+            MYSQL_USER: wordpress
+            MYSQL_PASSWORD_FILE: /run/secrets/MYSQL_PASSWORD
+        secrets:
+            - MYSQL_PASSWORD
+        networks:
+            - wp_overlay
+        volumes:
+            - mysql_data:/var/lib/mysql
+
+    wordpress:
+        depends_on:
+            - mysql
+        image: wordpress:latest
+        environment:
+            WORDPRESS_DB_HOST: mysql:3306
+            WORDPRESS_DB_NAME: wordpress
+            WORDPRESS_DB_USER: wordpress
+            WORDPRESS_DB_PASSWORD_FILE: /run/secrets/MYSQL_PASSWORD
+        secrets:
+            - MYSQL_PASSWORD
+        networks: 
+            - wp_overlay 
+        ports:
+            - "80:80"
+        volumes:
+            - wordpress_data:/var/www/html
+        deploy:
+            restart_policy:
+                condition: on-failure
+                delay: 5s
+                max_attempts: 3
+                window: 5m
+            replicas: 2
+            update_config:
+                parallelism: 2
+                delay: 10s
+                failure_action: rollback
+                max_failure_ratio: 0.3
+                order: start-first
+
+secrets:
+    MYSQL_PASSWORD:
+        file: MYSQL_PASSWORD.txt
+
+networks:
+    wp_overlay:
+        driver: overlay
+
+volumes:
+    mysql_data: {}
+    wordpress_data: {}
